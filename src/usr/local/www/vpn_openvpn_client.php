@@ -770,6 +770,13 @@ $section->addInput(new Form_Input(
 					'5: Output R and W characters to the console for each packet read and write, uppercase is used for TCP/UDP packets and lowercase is used for TUN/TAP packets' .'<br />' .
 					'6: Debug info range');
 
+	$section->addInput(new Form_Select(
+		'schedule',
+		'Schedule',
+		'',
+		array('none' => '', 'foo' => 'FooBar')
+		))->setHelp('Select the schedule that this client will run on.  Select \'none\' to run this client 24x7.');
+	
 	$section->addInput(new Form_Input(
 		'act',
 		null,
